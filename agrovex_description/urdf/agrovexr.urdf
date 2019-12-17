@@ -1,0 +1,75 @@
+<?xml	version="1.0"?>
+<robot	name="agrovexr">
+		<link	name="base_link">
+				<visual>
+						<geometry>
+								<mesh filename="package://agrovex_description/meshes/chasis_vex.dae" scale="1 1 1"	/>
+						</geometry>
+						<origin	rpy="0 0 1.570796"	xyz="0 0 0.05"	/>
+						<material	name="white">
+								<color	rgba="1 1 1 1"	/>
+						</material>
+				</visual>
+		</link>
+		<link	name="wheel_1">
+				<visual>
+						<geometry>
+								<mesh filename="package://agrovex_description/meshes/rueda1_vex.dae" scale="1 1 1"	/>
+						</geometry>
+						<origin	rpy="0 0 -1.570796"	xyz="0.02 -0.038 -0.024"	/>
+						<material	name="black">
+								<color	rgba="0 0 0 1"	/>
+						</material>
+				</visual>
+		</link>
+		<link	name="wheel_2">
+				<visual>
+						<geometry>
+								<mesh filename="package://agrovex_description/meshes/rueda2_vex.dae" scale="1 1 1"	/>
+						</geometry>
+						<origin	rpy="0 0 -1.570796"	xyz="0.02 -0.038 -0.024"	/>
+						<material	name="black"	/>
+				</visual>
+		</link>
+		<link	name="wheel_3">
+				<visual>
+						<geometry>
+								<mesh filename="package://agrovex_description/meshes/rueda3_vex.dae" scale="1 1 1"	/>
+						</geometry>
+						<origin	rpy="0 0 -1.570796"	xyz="-0.02 -0.038 -0.024"	/>
+						<material	name="black"	/>
+				</visual>
+		</link>
+		<link	name="wheel_4">
+				<visual>	<geometry>
+								<mesh filename="package://agrovex_description/meshes/rueda4_vex.dae" scale="1 1 1"	/>
+						</geometry>
+						<origin	rpy="0 0 -1.570796"	xyz="-0.02 -0.038 -0.024"	/>
+						<material	name="black"	/>
+				</visual>
+		</link>
+		<joint	name="base_to_wheel1"	type="continuous">
+				<parent	link="base_link"	/>
+				<child	link="wheel_1"	/>
+				<origin	rpy="0 0 -1.570796"   xyz="0.07925 -0.151 0.027"	/>
+				<axis xyz="1 0 0"	/>
+		</joint>
+		<joint	name="base_to_wheel2"	type="continuous">
+				<parent	link="base_link"	/>
+				<child	link="wheel_2"	/>
+				<origin	rpy="0 0 -1.570796"   xyz="-0.07925 -0.151 0.027"	/>
+				<axis xyz="1 0 0"	/>
+		</joint>
+		<joint	name="base_to_wheel3"	type="continuous">
+				<parent	link="base_link"	/>
+				<child	link="wheel_3"	/>
+				<origin	rpy="0 0 -1.570796"   xyz="-0.07925 0.151 0.027"	/>
+				<axis xyz="1 0 0"	/>
+		</joint>
+		<joint	name="base_to_wheel4"	type="continuous">
+				<parent	link="base_link"	/>
+				<child	link="wheel_4"	/>
+				<origin rpy="0 0 -1.570796"	xyz="0.07925 0.151 0.027"	/>
+				<axis xyz="1 0 0"	/>
+		</joint>
+</robot>
